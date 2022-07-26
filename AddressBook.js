@@ -78,7 +78,7 @@ class Contact{
     }
 
     set state(state){
-        let cityStateRegex = RegExp('^[a-zA-z]{4,}$');
+        let cityStateRegex = RegExp('^[A-Za-z]{4,}$');
         if (cityStateRegex.test(state))
             this._state = state;
         else
@@ -114,10 +114,12 @@ class Contact{
     }
 }
 
+let addressBookArray = new Array();
+
 try{
-    let contact = new Contact("Avani", "Trivedi", "Indore", "Indore", "MP", "432124", "91 9516044147", "avani@gmail.com");
-    console.log(contact.toString());
+    addressBookArray.push(new Contact("Avani", "Trivedi", "Indore", "Indore", "MadhyaPradesh", "432124", "91 9516044147", "avani@gmail.com"));
 }
 catch(e){
     console.log(e);
 }
+console.log(addressBookArray);
